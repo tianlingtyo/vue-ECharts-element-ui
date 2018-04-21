@@ -1,0 +1,5 @@
+1.密码传输前先对密码加密后，再进行网络传输
+2.使用方法：
+    eg :
+        let pwdVal = val;//获取密码
+        pwdVal = hex_sha1(hex_md5(pwdVal));

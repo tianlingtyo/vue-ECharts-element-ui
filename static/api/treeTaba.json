@@ -1,0 +1,27 @@
+[
+  {
+    "iTotalRecords": null,
+    "iTotalDisplayRecords": null,
+    "sEcho": null,
+    "iDisplayStart": 0,
+    "iDisplayLength": 10,
+    "isQueryCount": true,
+    "data": [ ],
+    "functionId": 2,
+    "functionCode": "001001",
+    "functionName": "组织机构",
+    "parentFunctionId": 1,
+    "functionFlag": null,
+    "state": 1,
+    "functionLeafNode": 1,
+    "functionType": 2,
+    "functionUrl": "sysOrgAction/toSysOrgPage.action",
+    "seqNum": 1,
+    "functionDesc": "",
+    "parentFunctionName": null,
+    "sysFunctionList": [ ],
+    "functionIds": null,
+    "icoName": null,
+    "children": []
+  }
+]

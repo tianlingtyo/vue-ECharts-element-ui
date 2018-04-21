@@ -1,0 +1,46 @@
+.c-transfer{
+    min-height:200px;
+    border:1px solid @color-grey;
+    margin:10px;
+    h2{
+        font-size:14px;
+        color:@color-dark-grey;
+        line-height:30px;
+        padding:5px 10px;
+    }
+    ul{
+        padding:5px;
+        li{
+            display:inline-block;
+            a{
+                display: inline-block;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                padding:6px 12px;
+                color:@color-white;
+                .wiconfont{
+                    position:relative;
+                    top:2px;
+                }
+            }
+            a.unselected{
+                background:@color-light-blue;
+                .wiconfont{
+                    display:none;
+                }
+            }
+            a.selected{
+                background:@color-light-green;
+                .wiconfont{
+                    display:inline;
+                }
+            }
+            a.unselected:active,a.unselected:hover{
+                background:@color-blue;
+            }
+            a.selected:hover,a.selected:active{
+                background:@color-green;
+            }
+        }
+    }
+}

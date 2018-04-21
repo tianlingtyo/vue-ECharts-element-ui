@@ -1,0 +1,306 @@
+const state = {
+  user:{ //用户基本信息
+    data:{},
+  },
+  menuNav:[],//左侧边菜单栏
+
+
+
+  listTree:[],
+  tree:{
+    listTree:[],
+    funTree:[]
+  },
+  formData:{
+    "14": [
+      [
+        {
+          "label": "机构名称",
+          "type": "input",
+          "name": "orgName",
+          "default":""
+        },
+        {
+          "label": "机构全称",
+          "type": "input",
+          "default":"",
+          "name": "orgFullName"
+        },
+        {
+          "label": "新增方式",
+          "type": "select",
+          "name": "addMethod",
+          "default":"1",
+          "data": [
+            {
+              "val": 0,
+              "text": "下级机构"
+            },
+            {
+              "val": 1,
+              "text": "平级机构"
+            }
+          ]
+        },
+        {
+          "label": "机构类型",
+          "type": "select",
+          "name": "orgType",
+          "default":"1",
+          "data": [
+            {
+              "val": "1",
+              "text":"省"
+            },
+            {
+              "val":"2",
+              "text": "市"
+            },
+            {
+              "val": "3",
+              "text": "直辖市"
+            },
+            {
+              "val": "4",
+              "text": "区／县"
+            }
+          ]
+        },
+        {
+          "label": "机构标识",
+          "type": "input",
+          "name": "orgCode",
+          "default":""
+        },
+        {
+          "label": "备注",
+          "type": "textarea",
+          "name": "remark",
+          "default":""
+        }
+      ],
+      [
+        {
+          "label": "角色名称",
+          "type": "input",
+          "name": "roleName",
+          "default":""
+        },
+        {
+          "label": "角色类型",
+          "type": "select",
+          "name": "roleType",
+          "default":"2",
+          "data": [
+            {
+              "val": 1,
+              "text": "管理角色"
+            },
+            {
+              "val": 2,
+              "text": "普通角色"
+            }
+          ]
+        }
+      ]
+    ],
+    "3":[
+      [
+        {
+          "label": "",
+          "type": "upload",
+          "name": "userPhoto",
+          "accpet":"image/*",
+          "default":""
+        },
+        {
+          "label": "用户账号",
+          "type": "input",
+          "name": "userAccount",
+          "default":""
+        },
+        {
+          "label": "用户姓名",
+          "type": "input",
+          "name": "userName",
+          "default":""
+        },
+        {
+          "label": "性别",
+          "type": "select",
+          "name": "sex",
+          "default":"1",
+          "data":[
+            {
+              "val":1,
+              "text":"男"
+            },
+            {
+              "val":0,
+              "text":"女"
+            }
+          ]
+        },
+        {
+          "label": "电话",
+          "type": "input",
+          "name": "telephone",
+          "default":""
+        },
+        {
+          "label": "邮箱",
+          "type": "input",
+          "name": "email",
+          "default":""
+        },
+        {
+          "label": "邮编",
+          "type": "input",
+          "name": "post",
+          "default":""
+        },
+        {
+          "label": "地址",
+          "type": "input",
+          "name": "address",
+          "default":""
+        },
+        {
+          "label": "排序号",
+          "type": "input",
+          "name": "seqNum",
+          "default":""
+        }
+      ],
+      [
+        {
+          "label": "新密码",
+          "type": "input",
+          "name": "userPwd",
+          "default":""
+        }
+      ]
+    ],
+    "4":[[
+      {
+        "label": "功能名称",
+        "type": "input",
+        "name": "functionName",
+        "default":""
+      },
+      {
+        "label": "功能编码",
+        "type": "input",
+        "name": "functionCode",
+        "default":""
+      },
+      {
+        "label": "父级功能名称",
+        "disabled":"true",
+        "type": "input",
+        "name": "parentFunctionName",
+        "default":""
+      },
+      {
+        "label": "状态",
+        "type": "select",
+        "name": "state",
+        "default":"1",
+        "data": [
+          {
+            "val": 1,
+            "text": "有效"
+          },
+          {
+            "val": 0,
+            "text": "无效"
+          }
+        ]
+      },
+      {
+        "label": "类型",
+        "type": "select",
+        "name": "functionType",
+        "default":"1",
+        "data": [
+          {
+            "val": 1,
+            "text": "菜单"
+          },
+          {
+            "val": 2,
+            "text": "功能"
+          }
+        ]
+      },
+      {
+        "label": "图标",
+        "type": "carousel11",
+        "name": "iconName",
+        "default":""
+      },
+      {
+        "label": "地址URL",
+        "type": "input",
+        "name": "functionUrl",
+        "default":""
+      },
+      {
+        "label": "排序号",
+        "type": "number",
+        "name": "seqNum",
+        "default":""
+      },
+      {
+        "label": "备注",
+        "type": "input",
+        "name": "mark",
+        "default":""
+      }
+    ]],
+    "5":[[
+      {
+        "label": "类型名称",
+        "type": "input",
+        "name": "typeDictName",
+        "default":""
+      },
+      {
+        "label": "类型编码",
+        "type": "input",
+        "name": "typeDictCode",
+        "default":""
+      },
+      {
+        "label": "父级类型",
+        "type": "input",
+        "name": "parentTypeDictCode",
+        "disabled":true,
+        "default":""
+      },
+      {
+        "label": "排序号",
+        "type": "input",
+        "name": "seqNum",
+        "rules":"{type: 'number',required:true,pattern:/^[a-z0-9]+$/,message:'请输入数字',trigger:'change'}",
+        "default":""
+      },
+      {
+        "label": "应用标识",
+        "type": "input",
+        "name": "applicationFlag",
+        "default":""
+      }
+    ]]
+
+  }
+  ,
+  tab: {
+      itemData:[],
+      currentData:{}
+  },
+  treeTab:{
+    itemData:[],
+  }
+};
+export default state

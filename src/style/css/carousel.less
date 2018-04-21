@@ -1,0 +1,48 @@
+.c-carousel{
+    >.wiconfont{
+        display:inline-block;
+        padding:4px 10px;
+        cursor:pointer;
+        position:relative;
+        top:-8px;
+    }
+    >.wiconfont:hover,>.wiconfont.active{
+        background:@color-grey;
+    }
+    .c-icon-list{
+        display:inline-block;
+        width:210px;
+        height:34px;
+        overflow:hidden;
+        ul{
+            display:inline-block;
+            padding-top:5px;
+            transition: all 0.5s;
+            position:relative;
+            left:0;
+            li{
+                float:left;
+                padding:0 10px;
+                margin-left:5px;
+                background:@color-grey;
+                span{
+                    color:@color-black;
+                }
+            }
+            li.active{
+                background:@link-color;
+                span{
+                    color:@color-white;
+                }
+            }
+        }
+    }
+}
+/*
+  {
+        "label": "  ",
+        "ctype": "upload",
+        "name": "userPhoto",
+        "accpet":"image/*",
+        "default":""
+      },*/

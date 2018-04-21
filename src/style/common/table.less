@@ -1,0 +1,46 @@
+.table-box{
+  width: inherit;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  color: #495060;
+  font-size: 12px;
+  background-color: #fff;
+  box-sizing: border-box;
+  table{
+    width: 100%;
+    text-align: center;
+    tr{
+      .selection{
+        position: relative;
+      }
+      th,td{
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #e9eaec;
+      }
+      th{
+        background-color: #f8f8f9;
+      }
+      .ms-tree-space {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        width: 14px;
+        height: 14px;
+      }
+
+      .ms-tree-space::before {
+        content: ""
+      }
+    }
+  }
+}
+.page-box{
+  margin-top: 20px;
+  text-align: right;
+
+}
